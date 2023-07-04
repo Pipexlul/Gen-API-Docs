@@ -5,7 +5,12 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "build:helper": "tsc src/scripts/_helper.ts --outDir dist/scripts",
+    "build:convert": "tsc src/scripts/convertYaml.ts --outDir dist/scripts --module es6 --moduleResolution nodenext",
+    "preconvertYaml": "npm run build:helper && npm run build:convert && node dist/scripts/_helper.js",
+    "convertYaml": "node dist/scripts/convertYaml.mjs",
+    "fastStart": "npm run convertYaml && npm run start"
   },
   "keywords": [],
   "author": {
