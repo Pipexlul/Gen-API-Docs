@@ -12,5 +12,8 @@
     "email": "felipgg@gmail.com",
     "url": "https://github.com/pipexlul"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
 }
