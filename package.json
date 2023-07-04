@@ -10,7 +10,8 @@
     "build:convert": "tsc src/scripts/convertYaml.ts --outDir dist/scripts --module es6 --moduleResolution nodenext",
     "preconvertYaml": "npm run build:helper && npm run build:convert && node dist/scripts/_helper.js",
     "convertYaml": "node dist/scripts/convertYaml.mjs",
-    "fastStart": "npm run convertYaml && npm run start"
+    "fastStart": "npm run convertYaml && npm run start",
+    "fastBuildStart": "npm run build && npm run fastStart"
   },
   "keywords": [],
   "author": {
