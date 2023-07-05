@@ -20,7 +20,7 @@
     "email": "felipgg@gmail.com",
     "url": "https://github.com/pipexlul"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/node": "^20.3.3",
