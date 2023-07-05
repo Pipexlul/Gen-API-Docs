@@ -1,17 +1,17 @@
 {
   "name": "gen-api-docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "npm run build && npm run fastStart",
     "genversion": "genversion --es6 --double --semi ./src/lib/version.ts",
     "prebuild": "npm run genversion",
     "build:convert": "tsc src/scripts/convertYaml.ts --outDir dist/scripts --module es6 --moduleResolution nodenext",
     "build": "tsc && npm run build:convert",
     "preconvertYaml": "npm run build && node dist/scripts/_helper.js",
     "convertYaml": "node dist/scripts/convertYaml.mjs",
-    "fastStart": "npm run build && npm run start",
+    "fastStart": "node dist/index.js",
     "genReadme": "npm run build && node dist/scripts/generateReadme.js"
   },
   "keywords": [],
