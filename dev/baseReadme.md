@@ -1,4 +1,4 @@
-# Gen API Docs v1.0.1
+# Gen API Docs v{version}
 
 Small project to serve API docs of your project using express from a .json file that follows the OpenAPI specification, thanks to [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express).
 

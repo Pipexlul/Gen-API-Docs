@@ -2,7 +2,7 @@ import * as fs from "fs";
 import * as path from "path";
 
 import express from "express";
-import swaggerUI, { JsonObject } from "swagger-ui-express";
+import swaggerUI, { JsonObject, SwaggerUiOptions } from "swagger-ui-express";
 
 let swaggerFile: string;
 let swaggerJson: JsonObject;
@@ -22,9 +22,15 @@ try {
   process.exit(1);
 }
 
+const options: SwaggerUiOptions = {
+  swaggerOptions: {
+    docExpansion: "full",
+  },
+};
+
 const router = express.Router();
 
 router.use(swaggerUI.serve);
-router.get("/", swaggerUI.setup(swaggerJson));
+router.get("/", swaggerUI.setup(swaggerJson, options));
 
 export default router;
